@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "Not So Simple",
+  "version": "0.1",
+  "description": "Puts quotes around any instance of the words 'simple,' 'simply,' 'easy,' and 'easily' in GitHub and RTD docs.",
+  "content_scripts": 
+  [
+    {
+      "matches": ["*://*.github.com/*","*://*.readthedocs.org/*"],
+      "js": ["notsimple.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
