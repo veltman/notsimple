@@ -35,8 +35,8 @@ function addQuotes(n) {
 
     tx = tx.replace(/\beas(il)?y\b[.,]?/gi, "\"$&\"")
            .replace(/\bsimpl(e|y)\b[.,]?/gi, "\"$&\"")
-           .replace(/["]{2}(eas(il)?y|simpl(e|y))[.,]?["]{2}/gi,function(m){
-             return m.replace(/""/g,"\"");
+           .replace(/['"]{2}(eas(il)?y|simpl(e|y))[.,]?['"]{2}/gi,function(m){
+             return m.replace(/['"]{2}/g,"\"");
            })
            .replace(/n(o|')t\s*["](eas(il)?y|simpl(e|y))[.,]?["]/gi,function(m){
              return m.replace(/"/g,"");
